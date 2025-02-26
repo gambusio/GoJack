@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-	carta1 := card.Card{1, card.SPADE}
+	carta1 := card.Card{13, card.SPADE}
 	fmt.Println(carta1.ToStr())
 }

@@ -37,6 +37,20 @@ func (c Card) ToStr() string {
 	default:
 		suitStr = "ERROR"
 	}
-	s = fmt.Sprintf("%d %s", c.Num, suitStr)
+	switch c.Num {
+	case 11:
+		s = fmt.Sprintf("J")
+		break
+	case 12:
+		s = fmt.Sprintf("Q")
+		break
+	case 13:
+		s = fmt.Sprintf("K")
+		break
+	default:
+		s = fmt.Sprintf("%d", c.Num)
+		break
+	}
+	s += fmt.Sprintf(" %s", suitStr)
 	return s
 }
